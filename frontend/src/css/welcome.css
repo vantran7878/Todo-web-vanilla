@@ -1,0 +1,122 @@
+body {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar{
+  display: flex;
+  position: sticky;
+  box-shadow: var(--shadow-sm); /* A soft grey outer shadow */
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+  /*font-family: Inter, Tahoma, sans-serif; */
+  font-size: 17px;
+}
+
+/* Basic reset for margins and padding */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 2rem;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-around;
+  top: 0;
+  width: 100%;
+}
+
+/* Styles for the list items */
+li a {
+  display: block; /* Makes the entire area of the link clickable */
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;  
+}
+
+li a:hover:not(.active) {
+    background-color: #ccc;
+}
+
+.active {
+    background-color: #04AA6D;
+}
+
+.page-wrapper {
+  display: flex;
+  font-family: sans-serif;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex: 1;
+  align-items: center;
+  min-height: 80vh;
+  gap: 2rem;
+}
+
+.main-illustration {
+  display: block;
+  margin-right: auto;
+  padding: 0 15px 0 15px;
+}
+
+.img {
+  display: block;
+  width: max(512px, 40vw);
+  height: auto;
+}
+
+.logo-container {
+  display: inline-flex;
+  justify-content: center; 
+  align-items: center;
+  text-decoration: none;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+
+.login-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #111;
+}
+
+.welcome-panel {
+  margin-left: auto;
+  padding: 0 15px 0 15px;
+}
+
+.selection-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: var(--space-xs);
+  margin-top: var(--space-sm);
+}
+
+.selection-box {
+  color: white;
+  display: block;
+  background-color: var(--light-shadow);
+  text-decoration: none;
+  padding: var(--space-md);
+  border-radius: var(--radius-sm);  
+  font-size: larger;
+}

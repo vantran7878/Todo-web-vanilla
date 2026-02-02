@@ -1,0 +1,42 @@
+:root {
+  /* Color */
+  --color-white: #fff;
+  --color-black: #000;
+  --background-light: #EDEDED;
+  --light-shadow: #4D4D4D;
+  --border-grey: #BCBCBC;
+  --text-primary: #000; 
+  --text-secondary: grey;
+  --shadow-sm: 0px 4px 12px #4D4D4D;
+  --shadow-lg: 0 5px 10px #888888; 
+
+  /* Font */
+  --font-main: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+
+  --radius-sm: 5px;
+  --radius-md: 10px;
+  --radius-lg: 17px;
+
+  /* */
+  --border-set-black: solid 1px black;
+  --border-set-grey: solid 1px var(--border-grey);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background: var(--background-light);
+  color: var(--text-primary);
+}
+
+button {
+  font-family: inherit;
+}

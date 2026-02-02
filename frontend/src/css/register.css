@@ -1,0 +1,92 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  background-image: url('/img/login-bg.jpg'); 
+  background-size: cover;
+  background-position: center;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-form{
+  display: flex;
+  flex-direction: row;
+  box-shadow: #4D4D4D 0px 4px 12px;
+  border-radius: 17px;
+  padding: 1em;
+  background-color: #EDEDED;
+  width: 40em;
+  height: 50em;
+  justify-content: center;
+}
+
+.register-panel{
+  padding: 1em;
+  flex: 1;
+  display: flex;;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.header-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.input-box{
+  width: 100%;
+  height: 200%;
+  padding: 0.75rem 0.5rem;
+  border: 1px solid #BCBCBC;
+  border-radius: 6px;
+  font-size: 20px;
+  background-color: white;
+}
+
+h1{
+  font-size: 3rem;
+}
+
+h3{
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+
+.button-container{
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  align-items: center;
+}
+
+.btn {
+  background-color: #4D4D4D;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width:100%;
+}
+
+
+.grey-link{
+  color: grey;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-top: 1em;
+}

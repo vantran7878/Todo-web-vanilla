@@ -1,0 +1,4 @@
+# Root .gitignore for Monorepo
+**/node_modules/
+**/dist/
+**/.env

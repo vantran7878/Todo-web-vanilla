@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="src/css/register.css">
+  <script type="module" src="src/js/register.js"> </script>
+</head>
+
+
+
+<body>
+
+  <div class="page-wrapper">
+    <form class="register-form" id="register-form">
+      <div class="register-panel">
+        <div class="header-box">
+          <h2> Create an account </h2>
+        </div>
+        <div class="email-box">
+          <h3> Email </h3>
+          <div class="input-container">
+            <input name="email" class="input-box" type="text" placeholder="Email" required> 
+          </div>
+        </div>
+
+        <div class="DisplayName-box">
+          <h3> Display name</h2>
+          <div class="input-container">
+            <input name="displayName" class="input-box" type="text" placeholder="Ex: Alice" required> 
+          </div>
+        </div>
+        
+        <div class="password-box">
+          <h3> Password </h2>
+          <div class="input-container">
+            <input name="password" id="password" class="input-box" type="password" placeholder="Password" required> 
+          </div>
+        </div>
+
+        <div class="re-enter-password-box">
+          <h3> Re-enter password </h2>
+          <div class="input-container">
+            <input class="input-box" id="re-password" type="password" placeholder="Password" required> 
+          </div>
+        </div>
+
+        <div class="button-container">
+          <button type="submit" id="reg-submit-btn" class="btn">REGISTER</button>
+          <div class="register-link">
+            Already have an account? <a href="/login"> Login now! </a>
+          </div>
+          <a class="grey-link" href="#"> Use as a guest account</a>
+        </div>
+      </div>
+    </form>
+
+  </div>
+  </div>  
+</body>
+</html>
