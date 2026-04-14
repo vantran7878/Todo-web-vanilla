@@ -1,28 +1,22 @@
-import { submitRegister } from '../js/api.js'
-const register = document.getElementById('register-form');
+import {register} from "../api/auth.api.js"
+const e_register = document.getElementById('register-form');
 const submitBtn = document.getElementById('reg-submit-btn');
 
 
-register.addEventListener('submit', async (e) => {
+e_register.addEventListener('submit', async (e) => {
   e.preventDefault();
 
   const formData = new FormData(e.target);
-  let email = formData.get('email'); 
-  let password = formData.get('password'); 
-  let displayName= formData.get('displayName'); 
-  console.log(email);
-  console.log(password);
-  console.log(displayName);
+  const email = formData.get('email'); 
+  const password = formData.get('password'); 
+  const displayName= formData.get('displayName'); 
 
-
-  const data = await submitRegister(email, password, displayName);
-
-  console.log(data);
-  if (!data.success) {
-    alert(data.message);
-    return;
+  try {
+    await register({email, password, displayName});
+    window.location.href = "/login"
+  } catch(error) {
+    alert(error.message)
   }
-  window.location.href = "/login"
 });
 
 function checkMatch(){
