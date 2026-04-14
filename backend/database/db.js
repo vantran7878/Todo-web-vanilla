@@ -15,7 +15,9 @@ export async function initDB() {
       email TEXT UNIQUE,
       password TEXT,
       displayName TEXT,
-      createdAt DATETIME DEFAULT CURRENT_TIMESTAMP
+      createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+      is_deleted INTEGER DEFAULT 0,
+      updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP
     );
 
     create table if not exists statusTypes(
@@ -33,22 +35,25 @@ export async function initDB() {
     create table if not exists tasks (
       id integer primary key autoincrement,
       user_id integer not null,
-      name text[100] not null,
+      name text not null,
       description text,
       status_id integer default 1,
       critical_id integer default 1,
       deadline datetime ,
-      date_created datetime datetime default current_timestamp,
+      date_created datetime default current_timestamp,
+      is_deleted INTEGER default 0,
+      reminder_time datetime,
+      updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP,
 
       foreign key (user_id) references users(id) on delete cascade,
-      foreign key (status_id) references statusType(id),
+      foreign key (status_id) references statusTypes(id),
       foreign key (critical_id) references criticalTypes(id)
     );
 
   `);
   console.log("Database created");
 
-    // ------------------- SEEDING --------------------//
+    // ------------------- Index --------------------//
     await db.exec(`
       INSERT OR IGNORE INTO statusTypes (id, name_en, name_vi) VALUES
       (1, 'On-going', 'Đang thực hiện'),
@@ -65,7 +70,7 @@ export async function initDB() {
 
     `);
   
-  console.log("Database seeded");
+  console.log("Category indexed");
 
   return db;
 }
