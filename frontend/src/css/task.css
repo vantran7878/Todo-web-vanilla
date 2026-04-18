@@ -1,0 +1,50 @@
+.navbar-container {
+    padding: 0 2rem;
+    z-index: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.hamburger-btn {
+    padding: 10px;
+    width: 35px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.hamburger-btn span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: #333;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger-btn.open span:nth-child(1) {
+    transform: translateY(13px) rotate(45deg);
+}
+
+.hamburger-btn.open span:nth-child(2) {
+    opacity: 0;
+}
+
+
+.hamburger-btn.open span:nth-child(3) {
+    transform: translateY(-13px) rotate(-45deg);
+}
+
+
+.nav-menu {
+    display: flex;
+}
+
+.profile-ico {
+    display: block;
+    width: fit-content;
+}

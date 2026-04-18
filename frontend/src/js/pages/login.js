@@ -11,8 +11,9 @@ e_login.addEventListener('submit', async (e) => {
 
   try {
     const data = await login(email, password);
+    const token = data.data.token;
 
-    localStorage.setItem("token", data.data.token);
+    localStorage.setItem("token", token);
 
     alert("Login success");
     window.location.href = "/"

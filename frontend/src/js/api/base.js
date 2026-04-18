@@ -5,13 +5,20 @@ const BASE_URL = "/api"
 export async function request(url, options = {}) {
     const token = localStorage.getItem("token");
 
+    const headers = {
+        "Content-Type": "application/json",
+        ...options.headers
+    }
+
+     // ❗ chỉ add token nếu KHÔNG disable
+    if (token && !options.skipAuth) {
+      headers.Authorization = `Bearer ${token}`;
+    }
+
     const res = await fetch(BASE_URL + url, {
-        headers: {
-            "Content-Type": "application/json",
-            ...(token && {Authorization: `Bearer ${JSON.parse(token)}`}) 
-        },
+        headers,
         ...options
-    });
+    })
 
     const data = await res.json()
 
